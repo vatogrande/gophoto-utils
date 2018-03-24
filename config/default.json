@@ -1,0 +1,11 @@
+{
+
+  "clientConfig":{
+    "password":"",
+    "username":"",
+    "clientId":"",
+    "clientSecret":"",
+    "host":""
+  }
+
+}
