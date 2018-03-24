@@ -5,7 +5,8 @@
     "username":"",
     "clientId":"",
     "clientSecret":"",
-    "host":""
+    "authHost":"auth.getphoto.io",
+    "apiHost":"api.getphoto.io"
   }
 
 }

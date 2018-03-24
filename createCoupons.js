@@ -32,19 +32,20 @@ var cName = {
 
 };
 
-function validateConfig(clientConfig) {
+function validateConfig() {
 
     if (clientConfig.password == '' || clientConfig.password == null) {console.log("password is missing") ; return false;}
     if (clientConfig.username == '' || clientConfig.username == null) {console.log("username is missing") ; return false;}
     if (clientConfig.clientId == '' || clientConfig.clientId == null) {console.log("clientId is missing") ; return false;}
     if (clientConfig.clientSecret == '' || clientConfig.clientSecret == null) {console.log("clientSecret is missing") ; return false;}
-    if (clientConfig.host == '' || clientConfig.host == null) {console.log("host is missing") ; return false;}
+    if (clientConfig.authHost == '' || clientConfig.authHost == null) {console.log("authHost is missing") ; return false;}
+    if (clientConfig.apiHost == '' || clientConfig.apiHost == null) {console.log("apiHost is missing") ; return false;}
 
     return true;
 }
 
 
-function authenticate(clientConfig,cb) {
+function authenticate(cb) {
     try{
 
         // Build the post string from an object
@@ -59,7 +60,7 @@ function authenticate(clientConfig,cb) {
 
         // An object of options to indicate where to post to
         var post_options = {
-            host: clientConfig.host ,
+            host: clientConfig.authHost ,
             path: '/oauth/access_token',
             method: 'POST',
             headers: {
@@ -88,7 +89,7 @@ function authenticate(clientConfig,cb) {
 }
 
 try{
-    authenticate(clientConfig,function(authObject){
+    authenticate(function(authObject){
         csv.mapFile(couponCsvFile, function(err, data) {
             //console.log(data);
 
@@ -146,7 +147,7 @@ function createCoupon(coupon,authToken,cb){
 
     // An object of options to indicate where to post to
     var post_options = {
-        host: 'api.getphoto.io',
+        host: clientConfig.apiHost,
         path: '/v4/coupons',
         method: 'POST',
         headers: {
