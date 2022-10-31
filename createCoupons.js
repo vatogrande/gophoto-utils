@@ -55,7 +55,7 @@ function authenticate(cb) {
             'username': clientConfig.username,
             'client_id' : clientConfig.clientId,
             'client_secret' : clientConfig.clientSecret,
-            'scope' : 'core.coupons.read,core.coupons.write'
+            'scope' : 'core.jobs.write core.jobs.read'
         });
 
         // An object of options to indicate where to post to

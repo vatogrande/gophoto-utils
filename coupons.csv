@@ -1,3 +1,11 @@
-Name,Promo Code,Usage,Monetary Value,No Ship Costs,Min Order Amt,Num Uses,Expires,Desc
-TEST1- 011 HHS Girls Soccer 2018,8iamzunq,value,$9 ,0,10,1,3/10/18,
-TEST2- 011 HHS Girls Soccer 2018,592rk8vq,value,$9.95 ,0,10,1,,
+Name,Promo Code,Usage,Monetary Value,Percent,No Ship Costs,Min Order Amt,Num Uses,Expires,Desc
+test-123,RtsW5kkk,percent,,50,,,1,3/10/2023,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
